@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: webapp-service
   labels:
-    app.kubernetes.io/name: webapp-service
+    app.kubernetes.io/name: webapp
     app.kubernetes.io/component: frontend
 spec:
   type: NodePort
@@ -13,4 +13,4 @@ spec:
       targetPort: 8080
       nodePort: 30001
   selector:
-    app.kubernetes.io/name: webapp-pod
+    app.kubernetes.io/name: webapp
